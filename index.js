@@ -149,31 +149,31 @@ const startAtlas = async () => {
         );
         process.exit();
       } else if (reason === DisconnectReason.connectionClosed) {
-        console.log("[ ATLAS ] Connection closed, reconnecting....\n");
+        console.log("[ HONORS ] Connection closed, reconnecting....\n");
         startAtlas();
       } else if (reason === DisconnectReason.connectionLost) {
-        console.log("[ ATLAS ] Connection Lost from Server, reconnecting...\n");
+        console.log("[ HONORS ] Connection Lost from Server, reconnecting...\n");
         startAtlas();
       } else if (reason === DisconnectReason.connectionReplaced) {
         console.log(
-          "[ ATLAS ] Connection Replaced, Another New Session Opened, Please Close Current Session First!\n"
+          "[ HONORS ] Connection Replaced, Another New Session Opened, Please Close Current Session First!\n"
         );
         process.exit();
       } else if (reason === DisconnectReason.loggedOut) {
         clearState();
         console.log(
-          `[ ATLAS ] Device Logged Out, Please Delete Session and Scan Again.\n`
+          `[ HONORS ] Device Logged Out, Please Delete Session and Scan Again.\n`
         );
         process.exit();
       } else if (reason === DisconnectReason.restartRequired) {
-        console.log("[ ATLAS ] Server Restarting...\n");
+        console.log("[ HONORS ] Server Restarting...\n");
         startAtlas();
       } else if (reason === DisconnectReason.timedOut) {
-        console.log("[ ATLAS ] Connection Timed Out, Trying to Reconnect...\n");
+        console.log("[ HONORS ] Connection Timed Out, Trying to Reconnect...\n");
         startAtlas();
       } else {
         console.log(
-          `[ ATLAS ] Server Disconnected: "It's either safe disconnect or WhatsApp Account got banned !\n"`
+          `[ HONORS ] Server Disconnected: "It's either safe disconnect or WhatsApp Account got banned !\n"`
         );
       }
     }
